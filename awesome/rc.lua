@@ -169,7 +169,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "Web", "Code", "Comm", "Docs", "Term" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -493,9 +493,21 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = true }
     },
 
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    -- Set Brave to always map on the tag named "Web" on screen 1.
+     { rule = { class = "brave-browser" },
+     properties = { screen = 1, tag = "Web" } },
+    
+    -- Set VSCode to always map on the tag named "Code" on screen 1.
+    { rule = { class = "code-oss" },
+        properties = { screen = 1, tag = "Code" } },
+
+    -- Set VSCode to always map on the tag named "Code" on screen 1.
+    { rule = { class = "discord" },
+        properties = { screen = 1, tag = "Comm" } },
+
+    -- Set VSCode to always map on the tag named "Code" on screen 1.
+    { rule = { class = "kitty" },
+        properties = { screen = 1, tag = "Term" } },
 }
 -- }}}
 
@@ -562,3 +574,6 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Autorun programs
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
