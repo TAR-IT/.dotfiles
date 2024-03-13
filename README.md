@@ -6,6 +6,7 @@
 ## Contents ##
 1. [What is awesomewm?](#awesome)
 2. [Details](#details)
+2. [Installation](#install)
 3. [Notes](#notes)
 
 <a name="awesome"></a>
