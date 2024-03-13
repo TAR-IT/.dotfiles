@@ -1,6 +1,6 @@
----------------------------
--- Default awesome theme --
----------------------------
+--------------------------------------------------
+-- Default awesome theme - customized by TAR-IT --
+--------------------------------------------------
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
@@ -11,24 +11,36 @@ local themes_path = gfs.get_configuration_dir() .. "themes/"
 
 local theme = {}
 
+-- Color variables
+
+color_white         = "#ffffff"
+color_black         = "#000000"
+color_lightgrey     = "#aaaaaa"
+color_mediumgrey    = "#333333"
+color_darkgrey      = "#555555"
+color_red           = "#ff0000"
+color_darkred       = "#91231c"
+
+-- Theme variables
+
 theme.font          = "Hack 12"
 
-theme.bg_normal     = "#000000"
-theme.bg_focus      = "#555555"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#333333"
+theme.bg_normal     = color_black
+theme.bg_focus      = color_darkgrey
+theme.bg_urgent     = color_red
+theme.bg_minimize   = color_mediumgrey
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = color_lightgrey
+theme.fg_focus      = color_white
+theme.fg_urgent     = color_white
+theme.fg_minimize   = color_white
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(1)
-theme.border_normal = "#000000"
-theme.border_focus  = "#ffffff"
-theme.border_marked = "#91231c"
+theme.border_normal = color_black
+theme.border_focus  = color_white
+theme.border_marked = color_darkred
 
 -- There are other variable sets
 -- overriding the default one when
